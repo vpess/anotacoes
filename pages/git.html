@@ -1,0 +1,121 @@
+<h1 id="git">Git</h1>
+<ul>
+    <li><strong><a href="https://git-scm.com/docs/">Documentação de referência</a></strong></li>
+</ul>
+<h2 id="camadas">Camadas</h2>
+<ul>
+    <li><em>Working directory</em>: Arquivos modificados (changes not-staged), excluídos ou adicionados (arquivos
+        untracked);</li>
+    <li><em>Staging area (staged)</em>: Arquivos preparados para serem versionados (git add);</li>
+    <li><em>Committed</em>: Arquivos salvos (git commit).</li>
+</ul>
+<h2 id="conceitos">Conceitos</h2>
+<ul>
+    <li><strong>Issues</strong>: Gerenciamento de bugs, melhorias e etc</li>
+    <li><strong>Milestones</strong>: Flags que servem para definir a versão em que as issues serão atendidas</li>
+    <li><strong>Labels</strong>: Tags para filtrar as issues</li>
+    <li><strong>Star</strong>: Favorita um projeto, e te permite filtrar quais mudanças quer acompanhar no projeto</li>
+    <li><strong>Fork</strong>: Clona um projeto já criado, para que você tenha as permissões necessárias para a edição
+    </li>
+    <li><strong>Pull Request</strong>: Faz um commit &quot;sugestão&quot; para um projeto existente, que você não tenha
+        permissão</li>
+    <li><strong>Branch</strong>: ramificação do projeto que permite que funcionalidades novas sejam desenvolvidas, sem
+        impactar o projeto principal</li>
+    <li><strong>Tag</strong>: Destaca um commit entre os demais. Tem utilidade em projetos longos que possuem muitos
+        commits, onde é necessário destacar um em específico (que possua uma versão implementada, uma funcionalidade,
+        etc). No Github, as tags são Releases.</li>
+    <li><strong>Conflicts</strong>: Um conflito sempre será apontado no arquivo conflitado. O conflito será sinalizado
+        com os símbolos &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;, ============== e
+        &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;. Para efetuar a correção, deve-se editar o arquivo conflitado,
+        escolhendo a alteração que deseja manter. Para isso, apague a alteração que deseja descartar, e também os
+        caracteres/símbolos especiais que sinalizam o conflito. Feito isso, efetue o commit e o push.</li>
+</ul>
+<h2 id="observa-es">Observações</h2>
+<ul>
+    <li>
+        <p>Se um arquivo for alterado enquanto estiver na staging area, as alterações não serão migradas para o commit.
+        </p>
+    </li>
+    <li>
+        <p>arquivo <strong>.gitignore</strong>: arquivo de configuração que contém quais os arquivos serão ignorados no
+            <code>git-add</code> e <code>git-commit</code>. Dentro do arquivo, deverá ser digitado o nome dos arquivos
+            que serão ignorados, ou então a extensão e outros parâmtros.</p>
+    </li>
+</ul>
+<h2 id="comandos">Comandos</h2>
+<p><code>git config --list</code> OU <code>git config --global --list</code>: exibe lista de configurações feitas no git
+</p>
+<p><code>git config --global user.name &quot;&quot;</code>: define o username do git (necessário especificar entre
+    parênteses)</p>
+<p><code>git config --global user.email &quot;&quot;</code>: define o email do git (necessário especiicar entre
+    parênteses)</p>
+<p><code>git config --global core.editor</code>: define o editor padrão do git (se nenhum for especificado, será
+    definido o Vim)</p>
+<p><code>git-init</code> ou <code>git init</code>: cria um diretório git na pasta especificada (.git). Todos os arquivos
+    armazenados na pasta oculta .git são as versões dos arquivos</p>
+<p><code>git status</code>: exibe o status do diretório git (status dos arquivos)</p>
+<p><code>git add</code>: adiciona um arquivo na lista de commit (arquivos a serem commitados)</p>
+<p><code>git add --all</code> OU <code>git add -A</code> OU <code>git add .</code> OU <code>git add *</code>: adiciona
+    todos os arquivos do diretório para a lista de commit</p>
+<p><code>git commit</code>: cria a versão do arquivo</p>
+<p><code>git commit -a -m &quot;mensagem&quot;</code>: Adiciona todos os arquivos para a lista de commit (a) e realiza o
+    commit com uma mensagem (m)</p>
+<p><code>git commit -m &quot;mensagem&quot;</code>: adiciona uma mensagem no commit. Útil para criar um log de
+    versionamento (ex. git commit -m &quot;funcionalidade x incrementada&quot;</p>
+<p><code>git commit -am &quot;mensagem&quot;</code>: faz um commit com arquivos que ja existiram (atualização)</p>
+<p><code>git log</code>: exibe um log de alterações</p>
+<p><code>git log --decorate</code>: exibe um log mais detalhado</p>
+<p><code>git log --author=&quot;nome_autor&quot;</code>: filtra os logs por autor</p>
+<p><code>git shortlog</code>: mostra em ordem alfabética quais os autores e quantos (e quais) commits fizeram</p>
+<p><code>git shortlog -sn</code>: mostra a quantidade de commits e seus respectivos autores</p>
+<p><code>git log --graph</code>: mostra em forma gráfica o que acontece com os branches e versões</p>
+<p><code>git log --oneline</code>: mostra commits e suas mensagens de forma organizada</p>
+<p><code>git show codigo_da_hash</code>: mostra detalhes de cada commit/hash</p>
+<p><code>git diff</code>: mostra alterações feitas no repositório, entre o diretório local e o último commit</p>
+<p><code>git diff --staged</code>: mostra alterações feitas no repositório, entre o que está no estágio staged e o
+    último commit</p>
+<p><code>git diff --name-only</code>: mostra apenas o nome dos arquivos modificados</p>
+<p><code>git checkout nome_do_arquivo</code>: retorna o arquivo para a versão anterior à da edição</p>
+<p><code>git checkout SHA-1</code>: entra no repositório git correspondente ao código SHA-1 inserido</p>
+<p><code>git clean -f</code>: remove todos os arquivos que foram adicionados no diretório de trabalho (que ainda não
+    possuam uma versão)</p>
+<p><code>git reset</code>: anula as alterações do repositório armazenadas em staged</p>
+<p><code>git reset HEAD nome_do_arquivo</code>: retorna o arquivo já adicionado para a versão anterior</p>
+<p><code>git reset --hard</code>: anula todas as alterações de todos os arquivos do repositório</p>
+<p><code>git reset --hard codigo_da_hash</code>: vai &#39;matar&#39; tudo que foi feito no commit</p>
+<p><code>git reset --soft codigo_da_hash</code>: retorna um commit para uma versão anterior (deve-se escolher uma hash
+    anterior a desejada)</p>
+<p><code>git reset --mixed codigo_da_hash</code>: retorna um commit para uma versão anterior (deve-se escolher uma hash
+    anterior a desejada)</p>
+<p><code>git clone</code>: cria uma cópia de um repositório, tanto local quanto em servidor</p>
+<p><code>git push</code>: envia as alterações commitadas para o servidor</p>
+<p><code>git pull</code>: atualiza as alterações do repositório (caso haja alguma atualização disponível). Também
+    atualiza atualizações de branches.</p>
+<p><code>git branch</code>: lista as branches do repositório local</p>
+<p><code>git branch nome_da_branch</code>: cria uma nova branch</p>
+<p><code>git branch -d nome_da_branch</code>: exclui uma branch local. É necessário estar fora da branch que deseja
+    excluir</p>
+<p><code>git branch -D nome_da_branch</code>: exclui uma branch local de forma forçada</p>
+<p><code>git push --delete origin nome_da_branch</code>: exclui uma branch remota (no servidor)</p>
+<p><code>git branch -m novo_nome</code>: renomeia uma branch local, quando se está &#39;checkado&#39; na branch em que
+    deseja renomear</p>
+<p><code>git branch -m nome_da_branch novo_nome</code>: renomeia uma branch local</p>
+<p><code>git checkout nome_da_branch</code>: aponta o git para a branch desejada</p>
+<p><code>git checkout -b nome_da_branch</code>: cria uma nova branch e aponta o git para a branch criada. Caso queira
+    criar uma branch a partir de um commit antigo, coloque o código do commit na frente do nome da branch.</p>
+<p><code>git push -u origin nome_da_branch</code>: atalho para git push --set-upstream, comando responsável para enviar
+    uma branch para o repositório git do servidor</p>
+<p><code>git merge nome_da_branch</code>: mescla as branches</p>
+<p><code>git tag -a nome_da_tag -m mensagem</code>: Cria uma tag. Caso queira criar a tag num commit específico, será
+    necessário usar o comando <code>git checkout codigo-_do_commit</code> antes do comando <code>git tag -a</code>.</p>
+<p><code>git tag</code>: lista as tags existentes localmente</p>
+<p><code>git push origin nome_da_tag</code>: envia uma tag para o repositório</p>
+<p><code>git tag -d nome_da_tag</code>: deleta uma tag local</p>
+<p><code>git push --delete origin nome_da_tag</code>: deleta uma tag no servidor</p>
+<p><code>git stash</code> OU <code>git stash save</code>: guarda alterações de um repositório local num espaço na
+    memória. Útil para casos onde não se queira commitar ou deletar alterações feitas.</p>
+<p><code>git stash list</code>: lista as alterações guardadas na memória</p>
+<p><code>git stash save &quot;mensagem&quot;</code>: armazena uma mudança em stash com uma mensagem personalizada</p>
+<p><code>git stash apply</code>: pega a primeira alteração da lista em stash e aplica ao projeto correspondente</p>
+<p><code>git stash pop</code>: faz o mesmo que o git stash apply, mas apaga a alteração após aplicá-la ao projeto</p>
+<p><code>git stash drop codigo_do_stash</code>: apaga o stash selecionado</p>

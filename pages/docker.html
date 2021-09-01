@@ -1,0 +1,26 @@
+<h1 id="docker">Docker</h1>
+<ul>
+    <li><strong><a href="https://docs.docker.com/engine/reference/run/">Documentação de referência</a></strong></li>
+    <li><strong><a href="https://hub.docker.com/">DockerHub: repositório de imagens</a></strong></li>
+</ul>
+<h2 id="conceitos">Conceitos</h2>
+<ul>
+    <li><strong>Imagem</strong>: Equivale à uma classe na programação orientada a objetos.</li>
+    <li><strong>Container</strong>: Equivale à um objeto de uma classe na programação orientada a objetos. Todo
+        container precisa ter um nome único</li>
+</ul>
+<h2 id="comandos">Comandos</h2>
+<p><code>docker run</code>: inicializa, baixa ou cria um container. Se um mesmo comando for executado mais de uma vez,
+    um novo container será criado</p>
+<p><code>docker container ps</code>: exibe os containers que estão sendo executados</p>
+<p><code>docker container ps -a</code>: exibe os containers que foram baixados, independente de estarem sendo executados
+    ou não</p>
+<p><code>docker container run --rm nome_do_container</code>: remove automaticamente um container da lista após o término
+    de sua execução. Comandos previamente executados direcionando o container em questão permanecem no log; apenas o
+    comando executado junto com o rm que é removido</p>
+<p><code>docker container run -it nome_do_container</code>: o parâmetro &#39;i&#39; significa modo interativo, e o
+    parâmetro &#39;t&#39; significa que o terminal será usado.
+    <strong>Exemplo</strong>: <code>docker container run -it debian bash</code></p>
+<p><code>docker container run --name nome_do_container</code>: dá um nome para o container que será executado. O comando
+    é útil para a reutilização de containers.
+    <strong>Exemplo</strong>: <code>docker container run --name mydeb -it debian bash</code></p>
