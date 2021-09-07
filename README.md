@@ -2,7 +2,7 @@
 
 Anotações técnicas que uso de forma corriqueira.
 
-A ideia é que eu crie anotações em formato Markdown e faça com que uma página web converta para html.
+Projeto ainda em fase de desenvolvimento. A ideia é que eu crie anotações em formato Markdown e faça com que uma página web converta para html.
 
 ## Possíveis referências
 
