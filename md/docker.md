@@ -17,6 +17,8 @@
     | `docker container start`  | `docker start`  |
     | `docker container exec`  | `docker exec`  |
 
+- Comandos do Linux (em grande maioria) funcionam nos containers, pois o container é baseado em Unix.
+
 ## Conceitos
 
 - **Imagem**: Equivale à uma classe na programação orientada a objetos.
@@ -38,9 +40,15 @@
 
 `docker container run -p 8080:80 nome_imagem`: inicia um container numa porta específica. Os números parametrizados no comando são as portas para acesso ao container. O primeiro é a porta no host, e o segundo é a porta no container. **Exemplo**: `docker container run -p 8080:80 nginx`
 
+`docker container run -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html`: aponta a pasta `./html`para a imagem do nginx, para a pasta `/usr/share/nginx/html`, que é a pasta que o nginx lê os arquivos. Para que o conteúdo seja visto no navegador, o endereço que deve ser acessado é: **localhost:8080/arquivo.html**
+
+`docker container run -d nome_container`: executa um container em background. O comando retorna um id,  que é o id do container
+
 `docker container start -ai nome_container`: inicia um container já criado e 'anexa' (attach) ele ao terminal
 
-`docker container stop nome_container`
+`docker container restart nome_container`: reinicia um container. Pode ser usado o nome do container ou o id dele
+
+`docker container stop nome_container`: encerra um container. Pode ser usado o nome do container ou o id dele
 
 `docker container ps`: exibe os containers que estão sendo executados
 
@@ -49,3 +57,13 @@
 `docker container ls`: exibe todos os containers que foram criados
 
 `docker container ls -a`: exibe todos os containers que foram executados, independente do status
+
+`docker volume ls`: exibe todos os volumes que foram criado
+
+`docker container logs nome_container`: exibe todos os logs que foram escritos no console. Muito útil na execução de containers em modo daemon (background)
+
+`docker container inspect nome_container`: exibe um json com diversas especificações do container
+
+`docker container exec nome_container cmd_linux`: executa um comando linux diretamente no container especificado
+
+`docker image rm nome_imagem`: deleta uma imagem docker
