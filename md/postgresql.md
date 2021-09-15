@@ -2,6 +2,7 @@
 
 - **[Documentação oficial](https://www.postgresql.org/docs/current/)**
 - **[Documentação de referência](https://www.postgresqltutorial.com/)**
+- **[Manipulação de dados em json (documentação oficial)](https://www.postgresql.org/docs/9.3/functions-json.html)**
 
 ## Tipos de dado
 
@@ -14,9 +15,9 @@
 - **jsonb**: formato json, porém melhor (o b no fim se refere a _better_).
 - **MONEY**: usado para fins monetários
 - **DATE**: usado para datas
-- **DEFAULT LOCALTIMESTAMP(0)**: pega o horário local da máquina. Exemplo: `data_atualizacao timestamp without time zone NOT NULL DEFAULT LOCALTIMESTAMP(0)`
+- **DEFAULT LOCALTIMESTAMP(0)**: pega o horário local da máquina e define ele como padrão. Isto faz com que ele seja inserido automaticamente na coluna correspondente do banco, mesmo sem especificá-lo como um valor. Exemplo: `data_atualizacao timestamp without time zone NOT NULL DEFAULT LOCALTIMESTAMP(0)`
 
-## Comandos
+## Comandos e exemplos de queries
 
 - `CREATE DATABASE nome_banco;` : Criar banco de dados
 - `CREATE TABLE nome_tabela;` : cria tabela no banco de dados
@@ -27,6 +28,8 @@
 - `DELETE FROM nome_tabela WHERE id IN (x, y)`: deleta todas as linhas que possuem o id especificado dentro do parênteses
 - `ALTER TABLE table_name ALTER COLUMN column_name TYPE data_type USING new_data_type`: altera o tipo de dado de uma tabela
 - `ALTER TABLE table_name ALTER COLUMN column_name TYPE json USING to_jsonb(column_name)::json`: altera o tipo de dado de uma coluna populada para json
+
+- `SELECT * FROM nome_tabela WHERE campo_json ->> 'cor' = 'azul'`: seleciona todas as ocorrências da tabela onde o valor do objeto **cor** seja igual a **azul**.
 
 ## Exemplos de código (scripts)
 
@@ -47,4 +50,15 @@ CREATE TABLE produtos (
     descricao CHARACTER VARYING(50) NOT NULL,
     preco MONEY NOT NULL,
     codigo_tipo INT REFERENCES tipos_produto(id) NOT NULL);
+```
+
+- Criação da tabela **filmes** dentro do schema **locadora**, com a coluna **id** sendo a primary key, a coluna **nome** com limite de 250 caracteres variados, a coluna **ano** com caractere numérico e a coluna **data_cadastro** que insere automaticamente a data em que o filme foi inserido (ou atualizado) na tabela.
+
+```sql
+CREATE TABLE locadora.filmes (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(250) NOT NULL,
+    ano NUMERIC NOT NULL,
+    data_cadastro TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT LOCALTIMESTAMP(0)
+)
 ```
