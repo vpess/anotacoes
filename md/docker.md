@@ -19,10 +19,14 @@
 
 - Comandos do Linux (em grande maioria) funcionam nos containers, pois o container é baseado em Unix.
 
+- Nem sempre é recomendado utilizar as imagens docker que estejam na versão mais recente, pois elas são atualizadas de forma automática e podem gerar bugs. O mais correto é utilizar uma imagem de versão específica e, caso haja alguma atualização pertinente, fazê-la de forma manual.
+
 ## Conceitos
 
-- **Imagem**: Equivale à uma classe na programação orientada a objetos.
+- **Imagem**: Equivale à uma classe na programação orientada a objetos. A partir de uma imagem, podemos criar diversos containers.
 - **Container**: Equivale à um objeto de uma classe na programação orientada a objetos. Todo container precisa ter nomes únicos.
+- **Docker Registry**: aplicação server-side que serve para guardar e distribuir imagens Docker. Funciona como o Git, e pode ser implementado em empresas de forma privada
+- **DockerHub**: SAAS (Software como serviço), produto oficial que possui um repositório oficial de imagens Docker
 
 ## Comandos
 
@@ -67,3 +71,21 @@
 `docker container exec nome_container cmd_linux`: executa um comando linux diretamente no container especificado
 
 `docker image rm nome_imagem`: deleta uma imagem docker
+
+`docker image pull`: baixa uma imagem do Dockerhub
+
+`docker image push`: envia uma imagem ao Dockerhub
+
+`docker image ls`: lista as imagens baixadas do Docker
+
+`docker container build`: pega um arquivo descritor do Docker, interpreta este arquivo e cria uma imagem
+
+`docker image inspect nome_imagem`: exibe um json que contém informações sobre a imagem especificada
+
+`docker container --help`: exibe subcomandos de container que podem ser utilizados
+
+`docker image --help`: exibe subcomandos de imagem que podem ser utilizados
+
+`docker volume --help`: exibe subcomandos de volume que podem ser utilizados
+
+`docker image tag redis:latest r3d1s`: cria uma nova imagem, usando como referência a imagem **redis**, na versão latest.
