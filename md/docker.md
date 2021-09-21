@@ -29,7 +29,7 @@
 - **Container**: Equivale à um objeto de uma classe na programação orientada a objetos. Todo container precisa ter nomes únicos.
 - **Docker Registry**: aplicação server-side que serve para guardar e distribuir imagens Docker. Funciona como o Git, e pode ser implementado em empresas de forma privada
 - **DockerHub**: SAAS (Software como serviço), produto oficial que possui um repositório oficial de imagens Docker
-- **Dockerfile**: arquivo não tem extensão. O arquivo não funcionará se tiver um nome diferente. Serve para o build de imagens que são criadas manualmente.
+- **Dockerfile**: arquivo não tem extensão. O arquivo não funcionará se tiver um nome diferente. Serve para o build de imagens que são criadas manualmente/personalizadas.
 
 ## Comandos
 
