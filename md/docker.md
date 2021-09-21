@@ -21,12 +21,15 @@
 
 - Nem sempre é recomendado utilizar as imagens docker que estejam na versão mais recente, pois elas são atualizadas de forma automática e podem gerar bugs. O mais correto é utilizar uma imagem de versão específica e, caso haja alguma atualização pertinente, fazê-la de forma manual.
 
+- Ao digitar comandos num Dockerfile, cada linha de comando corresponde à um layer (step) de build.
+
 ## Conceitos
 
 - **Imagem**: Equivale à uma classe na programação orientada a objetos. A partir de uma imagem, podemos criar diversos containers.
 - **Container**: Equivale à um objeto de uma classe na programação orientada a objetos. Todo container precisa ter nomes únicos.
 - **Docker Registry**: aplicação server-side que serve para guardar e distribuir imagens Docker. Funciona como o Git, e pode ser implementado em empresas de forma privada
 - **DockerHub**: SAAS (Software como serviço), produto oficial que possui um repositório oficial de imagens Docker
+- **Dockerfile**: arquivo não tem extensão. O arquivo não funcionará se tiver um nome diferente. Serve para o build de imagens que são criadas manualmente.
 
 ## Comandos
 
@@ -89,3 +92,28 @@
 `docker volume --help`: exibe subcomandos de volume que podem ser utilizados
 
 `docker image tag redis:latest r3d1s`: cria uma nova imagem, usando como referência a imagem **redis**, na versão latest.
+
+`docker image build -t build-exemplo .`: Dá build no Dockerfile especificado no diretório local (.). O parâmetro *-t* serve para dar uma tag à imagem, o nome que ela terá.
+
+- Exemplo de build (Dockerfile)
+
+ ```docker
+ FROM nginx:latest
+ RUN echo '<h1>Hello World!</h1>' > /usr/share/nginx/html/index.html
+ ```
+
+ O exemplo acima especifica o nome e versão da imagem que será utilizada, e depois cria o arquivo *index.html* no diretório especificado no comando, com o texto em *echo*.
+
+- Exemplo de Dockerfile com argumentos
+
+ ```docker
+ FROM debian
+ LABEL maintainer 'Vinicius'
+
+ ARG S3_BUCKET=files
+ ENV S3_BUCKET=${S3_BUCKET}
+ ```
+
+ Utilizando o exemplo acima, é possível fazer um build alterando o valor do argumento, através do comando `docker image build --build-arg S3_BUCKET=myapp -t nome_imagem .`.
+
+ Utilizando o exemplo acima, é possível verificar o mantenedor da imagem através do comando `docker image inspect --format ="{{index .Config.Labels \"maintainer\"}}" nome_imagem`.
