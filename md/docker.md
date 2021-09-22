@@ -97,23 +97,35 @@
 
 - Exemplo de build (Dockerfile)
 
- ```docker
- FROM nginx:latest
- RUN echo '<h1>Hello World!</h1>' > /usr/share/nginx/html/index.html
- ```
+  ```docker
+  FROM nginx:latest
+  RUN echo '<h1>Hello World!</h1>' > /usr/share/nginx/html/index.html
+  ```
 
- O exemplo acima especifica o nome e versão da imagem que será utilizada, e depois cria o arquivo *index.html* no diretório especificado no comando, com o texto em *echo*.
+  O exemplo acima especifica o nome e versão da imagem que será utilizada, e depois cria o arquivo *index.html* no diretório especificado no comando, com o texto em *echo*.
 
 - Exemplo de Dockerfile com argumentos
 
- ```docker
- FROM debian
- LABEL maintainer 'Vinicius'
+  ```docker
+  FROM debian
+  LABEL maintainer 'Vinicius'
 
- ARG S3_BUCKET=files
- ENV S3_BUCKET=${S3_BUCKET}
- ```
+  ARG S3_BUCKET=files
+  ENV S3_BUCKET=${S3_BUCKET}
+  ```
 
- Utilizando o exemplo acima, é possível fazer um build alterando o valor do argumento, através do comando `docker image build --build-arg S3_BUCKET=myapp -t nome_imagem .`.
+  Utilizando o exemplo acima, é possível fazer um build alterando o valor do argumento, através do comando `docker image build --build-arg S3_BUCKET=myapp -t nome_imagem .`.
 
- Utilizando o exemplo acima, é possível verificar o mantenedor da imagem através do comando `docker image inspect --format ="{{index .Config.Labels \"maintainer\"}}" nome_imagem`.
+  Utilizando o exemplo acima, é possível verificar o mantenedor da imagem através do comando `docker image inspect --format ="{{index .Config.Labels \"maintainer\"}}" nome_imagem`.
+
+- Exemplo de Dockerfile para copiar arquivos da máquina host para um container
+
+  ```docker
+  FROM nginx:latest
+  LABEL maintainer 'Vinicius'
+
+  RUN echo '<h1>Sem conteudo</h1>' > /usr/share/nginx/html/conteudo.html
+  COPY *.html /usr/share/nginx/html/
+  ```
+
+  O exemplo acima salva texto armazenado em *echo* no arquivo **contudo.html**, e depois, copia todos os arquivos de extensão html do diretório local do host para o diretório */usr/share/nginx/html*.
