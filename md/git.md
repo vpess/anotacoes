@@ -51,8 +51,6 @@
 
 `git commit`: cria a versão do arquivo
 
-`git add nome_arquivo && git commit -m "mensagem"`: adiciona um arquivo e insere a mensagem de commit dele
-
 `git commit -a -m "mensagem"`: Adiciona todos os arquivos para a lista de commit (a) e realiza o commit com uma mensagem (m)
 
 `git commit -m "mensagem"`: adiciona uma mensagem no commit. Útil para criar um log de versionamento (ex. git commit -m "funcionalidade x incrementada"
@@ -61,7 +59,7 @@
 
 `git log`: exibe um log de alterações
 
-`git log  --decorate`: exibe um log mais detalhado
+`git log --decorate`: exibe um log mais detalhado
 
 `git log --author="nome_autor"`: filtra os logs por autor
 
@@ -156,3 +154,11 @@
 `git stash pop`: faz o mesmo que o git stash apply, mas apaga a alteração após aplicá-la ao projeto
 
 `git stash drop codigo_do_stash`: apaga o stash selecionado
+
+`git config --global http.sslVerify false`: ignora os certificados SSL em todos os projetos do Git
+
+- Adiciona um arquivo e insere a mensagem de commit dele:
+
+```sh
+git add nome_arquivo && git commit -m "mensagem"
+```
