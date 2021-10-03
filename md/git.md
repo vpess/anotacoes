@@ -159,6 +159,6 @@
 
 - Adiciona um arquivo e insere a mensagem de commit dele:
 
-```sh
-git add nome_arquivo && git commit -m "mensagem"
-```
+    ```sh
+    git add nome_arquivo && git commit -m "mensagem"
+    ```
