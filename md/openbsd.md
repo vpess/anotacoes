@@ -33,7 +33,7 @@
 - Adicionar o texto abaixo no arquivo `/etc/rc.conf`:
 
     ```sh
-    pkg_scripts=" dbus_daemon avahi_daemon"
+    pkg_scripts="dbus_daemon avahi_daemon"
     hald_enable="YES"
     dbus_enable="YES"
     ```
