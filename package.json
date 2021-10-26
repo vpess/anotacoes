@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "grey-matter": "^0.0.0",
     "marked": "^3.0.7",
     "next": "11.1.2",
