@@ -21,7 +21,30 @@
 
 - Nem sempre é recomendado utilizar as imagens docker que estejam na versão mais recente, pois elas são atualizadas de forma automática e podem gerar bugs. O mais correto é utilizar uma imagem de versão específica e, caso haja alguma atualização pertinente, fazê-la de forma manual.
 
-- Ao digitar comandos num Dockerfile, cada linha de comando corresponde à um layer (step) de build.
+- Os comandos/layers de um Dockerfile que são mais mutáveis devem ficar no final do Dockerfile, para que a sintaxe de um comando via console seja mais clara e objetiva.
+
+- Ao digitar comandos num Dockerfile, cada linha de comando corresponde à um layer (step) de build. Caso queira quebrar a linha (fazendo assim que mais de um comando seja executado numa única layer), utilize o caractere `\` no fim da linha, conforme o exemplo abaixo (layer **3**):
+
+  ```docker
+  FROM python:3.9
+  LABEL maintainer 'vpess'
+
+  RUN useradd www && \
+    mkdir /app && \
+    mkdir /log && \
+    chown www /log
+
+  USER www
+  VOLUME /log 
+  WORKDIR /app
+  #expõe uma porta:
+  EXPOSE 8000
+
+  #ponto de entrada do processo que será executado
+  ENTRYPOINT ["/usr/local/bin/python"]
+  #parâmetro para o ENTRYPOINT
+  CMD ["run.py"]
+  ```
 
 ## Conceitos
 
@@ -94,6 +117,10 @@
 `docker image tag redis:latest r3d1s`: cria uma nova imagem, usando como referência a imagem **redis**, na versão latest.
 
 `docker image build -t build-exemplo .`: Dá build no Dockerfile especificado no diretório local (.). O parâmetro *-t* serve para dar uma tag à imagem, o nome que ela terá.
+
+`docker container stop $(docker container ls -aq) && docker system prune -af --volumes`: remove todos os containers do Docker
+
+`docker container run -it -volumes-from-python-server debian cat /log/http-server.log`: executa um outro container (com imagem Debian) para ler os logs que estão no volume presente no container'python-server'
 
 - Exemplo de build (Dockerfile)
 
