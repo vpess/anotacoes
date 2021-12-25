@@ -162,3 +162,5 @@ cover_image: '/images/docker-icon.png'
   ```
 
   O exemplo acima salva texto armazenado em *echo* no arquivo **contudo.html**, e depois, copia todos os arquivos de extensão html do diretório local do host para o diretório */usr/share/nginx/html*.
+
+
