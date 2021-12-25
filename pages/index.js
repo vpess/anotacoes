@@ -45,7 +45,7 @@ export async function getStaticProps() { //Pega dados de um diretório especific
 
   return {
     props: {
-      posts,
+      posts: posts,
     },
   }
 
