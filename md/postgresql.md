@@ -1,10 +1,16 @@
-# Postgre SQL
+---
+title: 'Postgre SQL'
+date: '25/10/21'
+update: '25/10/21'
+excerpt: 'Informações e comandos sobre o Postgre SQL.'
+cover_image: '/images/postgresql-icon.png'
+---
 
 - **[Documentação oficial](https://www.postgresql.org/docs/current/)**
 - **[Documentação de referência](https://www.postgresqltutorial.com/)**
 - **[Manipulação de dados em json (documentação oficial)](https://www.postgresql.org/docs/9.3/functions-json.html)**
 
-## Tipos de dado
+## -> Tipos de dado
 
 - **PRIMARY KEY**: Chave primária
 - **REFERENCES**: Chave estrangeira
@@ -17,7 +23,7 @@
 - **DATE**: usado para datas
 - **DEFAULT LOCALTIMESTAMP(0)**: pega o horário local da máquina e define ele como padrão. Isto faz com que ele seja inserido automaticamente na coluna correspondente do banco, mesmo sem especificá-lo como um valor. Exemplo: `data_atualizacao timestamp without time zone NOT NULL DEFAULT LOCALTIMESTAMP(0)`
 
-## Comandos e exemplos de queries
+## -> Comandos e exemplos de queries
 
 - `CREATE DATABASE nome_banco;` : Criar banco de dados
 - `CREATE TABLE nome_tabela;` : cria tabela no banco de dados
@@ -31,7 +37,7 @@
 
 - `SELECT * FROM nome_tabela WHERE campo_json ->> 'cor' = 'azul'`: seleciona todas as ocorrências da tabela onde o valor do objeto **cor** seja igual a **azul**.
 
-## Exemplos de código (scripts)
+## -> Exemplos de código (scripts)
 
 - Criação da tabela **secao03**, com uma coluna **id** como chave primária e uma coluna **descricao** com limite de 50 caracteres variados e que não pode ser nula.
 

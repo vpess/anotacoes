@@ -1,11 +1,17 @@
-# Vim
+---
+title: 'Vim'
+date: '29/10/21'
+update: '29/10/21'
+excerpt: 'Keybindings e comandos do editor de texto Vim.'
+cover_image: '/images/vim-icon.png'
+---
 
 - **[Vim Tutorial](https://www.openvim.com/)**
 - **[Vim Diesel's OFFICIAL Vimtutor Let's Play/Commentary! (1 HOUR+ Special)](https://www.youtube.com/watch?v=d8XtNXutVto)**
 
 `vimtutor`: inicia um tutorial interativo do Vim no terminal
 
-## Comandos
+## -> Comandos
 
 ### 🏃 Mover o cursor
 

@@ -1,8 +1,14 @@
-# Visual Studio Code
+---
+title: 'Visual Studio Code'
+date: '29/10/21'
+update: '29/10/21'
+excerpt: 'Atalhos do VSCode.'
+cover_image: '/images/vscode-icon.png'
+---
 
 [Keybindings](https://code.visualstudio.com/docs/getstarted/keybindings)
 
-## Hotkeys
+## -> Hotkeys
 
 - **Ctrl + Shift + P**: 'Menu iniciar' do Vscode, conhecido como paleta de comandos
 

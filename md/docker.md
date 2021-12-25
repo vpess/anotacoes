@@ -1,10 +1,16 @@
-# Docker
+---
+title: 'Docker'
+date: '29/10/21'
+update: '29/10/21'
+excerpt: 'Informações e comandos do Docker.'
+cover_image: '/images/docker-icon.png'
+---
 
 - **[Documentação oficial](https://docs.docker.com/engine/reference/run/)**
 - **[DockerHub: repositório de imagens](https://hub.docker.com/)**
 - **[Apostila auxiliar](http://files.cod3r.com.br/apostila-docker.pdf)**
 
-## Observações
+## -> Observações
 
 - Containers não reconhecem endereço DNS. Caso haja a necessidade de subir uma aplicação para um container, as rotas/servidores deverão ser especificadas pelo endereço IP.
 
@@ -25,7 +31,7 @@
 
 - Ao digitar comandos num Dockerfile, cada linha de comando corresponde à um layer (step) de build. Caso queira quebrar a linha (fazendo assim que mais de um comando seja executado numa única layer), utilize o caractere `\` no fim da linha, conforme o exemplo abaixo (layer **3**):
 
-  ```docker
+  ```sh
   FROM python:3.9
   LABEL maintainer 'vpess'
 
@@ -46,7 +52,7 @@
   CMD ["run.py"]
   ```
 
-## Conceitos
+## -> Conceitos
 
 - **Imagem**: Equivale à uma classe na programação orientada a objetos. A partir de uma imagem, podemos criar diversos containers.
 - **Container**: Equivale à um objeto de uma classe na programação orientada a objetos. Todo container precisa ter nomes únicos.
@@ -54,7 +60,7 @@
 - **DockerHub**: SAAS (Software como serviço), produto oficial que possui um repositório oficial de imagens Docker
 - **Dockerfile**: arquivo não tem extensão. O arquivo não funcionará se tiver um nome diferente. Serve para o build de imagens que são criadas manualmente/personalizadas.
 
-## Comandos
+## -> Comandos
 
 `systemctl start docker`: inicia os serviços do Docker num ambiente Linux/Unix
 
@@ -156,3 +162,5 @@
   ```
 
   O exemplo acima salva texto armazenado em *echo* no arquivo **contudo.html**, e depois, copia todos os arquivos de extensão html do diretório local do host para o diretório */usr/share/nginx/html*.
+
+

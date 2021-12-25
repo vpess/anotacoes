@@ -1,10 +1,16 @@
-# Open BSD
+---
+title: 'Open BSD'
+date: '29/10/21'
+update: '29/10/21'
+excerpt: 'Informações e passo a passos relacionados ao SO.'
+cover_image: '/images/openbsd-icon.png'
+---
 
 - **[Isos](https://www.openbsd.org/faq/faq4.html#Download)**
 - **[Mirrors](https://www.openbsd.org/ftp.html)**
 - **[Manuais](https://man.openbsd.org/)**
 
-## Guia de instalação
+## -> Guia de instalação
 
 - Selecionar 'I' e prosseguir com as configurações padrão do instalador (atentar-se com a parte do particionamento)
 
@@ -46,7 +52,7 @@
     reboot
     ```
 
-## Comandos
+## -> Comandos
 
 `sysupgrade -s`: atualiza o sistema
 
