@@ -1,16 +1,21 @@
+import Head from 'next/head'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import marked from 'marked'
 import Link from 'next/link'
 
-export default function PostPage({frontmatter: {title}, slug, content}) {
+export default function PostPage({frontmatter: {title_note}, slug, content}) {
     return <>
+        <Head>
+        <title>Anotações™ | {title_note}</title>
+        </Head>
+
     <Link href='/'>
         <a className='btn btn-back'>⬅️ Voltar</a>
     </Link>
     <div className='card card-page'>
-    <h1 className='post-title'>{title}</h1>
+    <h1 className='post-title'>{title_note}</h1>
     <div className='post-body'>
         <br></br>
         <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>

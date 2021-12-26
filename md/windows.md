@@ -1,7 +1,8 @@
 ---
 title: 'Windows'
-date: '29/10/21'
-update: '29/10/21'
+title_note: '🪟 Windows'
+date: '01/09/21'
+update: '01/09/21'
 excerpt: 'Informações e passo a passos relacionados ao SO.'
 cover_image: '/images/windows-icon.png'
 ---

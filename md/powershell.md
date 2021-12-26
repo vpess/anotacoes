@@ -1,7 +1,8 @@
 ---
 title: 'Powershell'
-date: '29/10/21'
-update: '29/10/21'
+title_note: '🐚 Powershell'
+date: '01/09/21'
+update: '01/09/21'
 excerpt: 'Informações e comandos do Powershell.'
 cover_image: '/images/powershell-icon.png'
 ---
