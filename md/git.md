@@ -1,7 +1,8 @@
 ---
 title: 'Git'
-date: '25/10/21'
-update: '25/10/21'
+title_note: '🐱 Git'
+date: '03/10/21'
+update: '03/10/21'
 excerpt: 'Informações e comandos sobre o Git.'
 cover_image: '/images/git-icon.png'
 ---

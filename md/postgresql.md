@@ -1,7 +1,8 @@
 ---
 title: 'Postgre SQL'
-date: '25/10/21'
-update: '25/10/21'
+title_note: '🐘 Postgre SQL'
+date: '15/09/21'
+update: '15/09/21'
 excerpt: 'Informações e comandos sobre o Postgre SQL.'
 cover_image: '/images/postgresql-icon.png'
 ---

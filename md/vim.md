@@ -1,7 +1,8 @@
 ---
 title: 'Vim'
-date: '29/10/21'
-update: '29/10/21'
+title_note: '🇻 Vim'
+date: '04/10/21'
+update: '04/10/21'
 excerpt: 'Keybindings e comandos do editor de texto Vim.'
 cover_image: '/images/vim-icon.png'
 ---

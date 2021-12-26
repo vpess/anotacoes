@@ -1,7 +1,8 @@
 ---
 title: 'Banco de Dados'
-date: '29/10/21'
-update: '29/10/21'
+title_note: '🗄️ Banco de Dados'
+date: '01/09/21'
+update: '01/09/21'
 excerpt: 'Informações gerais e conceitos de Banco de Dados.'
 cover_image: '/images/database-icon.png'
 ---
@@ -19,11 +20,11 @@ cover_image: '/images/database-icon.png'
 - **Primary Key (PK)**: Conjunto de um ou mais campos que nunca se repetem; identidade da tabela. São utilizados como índice de referência na criação de relacionamentos entre tabelas.
 - **Foreign Key (FK)**: Valor de referência a uma Primary Key de outra tabela da mesma tabela (ou schema) para criar um relacionamento.
 
-### Observações
+### -> Observações
 
 - As colunas de uma tabela são também chamadas de atributos da tabela.
 
-### O que pode ser definido como tabela, num modelo relacional de banco de dados?
+### -> O que pode ser definido como tabela, num modelo relacional de banco de dados?
 
 - Coisas tangíveis, elementos físicos (carro, produto, animal);
 - Funções (Perfis de usuário, status de compra);

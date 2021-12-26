@@ -1,5 +1,6 @@
 ---
 title: 'Docker'
+title_note: '🐳 Docker'
 date: '29/10/21'
 update: '29/10/21'
 excerpt: 'Informações e comandos do Docker.'
@@ -162,5 +163,3 @@ cover_image: '/images/docker-icon.png'
   ```
 
   O exemplo acima salva texto armazenado em *echo* no arquivo **contudo.html**, e depois, copia todos os arquivos de extensão html do diretório local do host para o diretório */usr/share/nginx/html*.
-
-

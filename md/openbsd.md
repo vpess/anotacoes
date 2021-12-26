@@ -1,7 +1,8 @@
 ---
 title: 'Open BSD'
-date: '29/10/21'
-update: '29/10/21'
+title_note: '🐡 Open BSD'
+date: '04/10/21'
+update: '04/10/21'
 excerpt: 'Informações e passo a passos relacionados ao SO.'
 cover_image: '/images/openbsd-icon.png'
 ---

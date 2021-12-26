@@ -1,7 +1,8 @@
 ---
 title: 'Visual Studio Code'
-date: '29/10/21'
-update: '29/10/21'
+title_note: 'VSCode'
+date: '03/10/21'
+update: '03/10/21'
 excerpt: 'Atalhos do VSCode.'
 cover_image: '/images/vscode-icon.png'
 ---
