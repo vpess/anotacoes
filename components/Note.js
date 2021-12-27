@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Note({ post }) {
     return (
-        <div class="card">
+        <div className='card'>
 
             <Link href={`/blog/${post.slug}`}>
                 <img src={post.frontmatter.cover_image} alt='' />
