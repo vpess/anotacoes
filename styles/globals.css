@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
 }
 
 body {
@@ -16,6 +16,10 @@ body {
 
 #text {
   color: white;
+}
+
+strong {
+  font-weight: bold;
 }
 
 p {
@@ -171,9 +175,10 @@ ol {
 
 .post-body pre {
   background: #2a2a2a;
-  padding: 20px;
+  padding: 9px;
   margin: 20px 0;
   line-height: 2.3;
+  width: inherit;
 }
 
 @media (max-width: 500px) {
