@@ -14,7 +14,7 @@ export default function Home({ posts }) {
 
       <div className="posts">
         {posts.map((post, index) => (
-          <Note post={post} />
+          <Note key={index} post={post} />
         ))}
       </div>
     </div>
