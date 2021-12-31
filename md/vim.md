@@ -12,7 +12,7 @@ cover_image: '/images/vim-icon.png'
 
 `vimtutor`: inicia um tutorial interativo do Vim no terminal
 
-## -> Comandos
+## Comandos
 
 ### 🏃 Mover o cursor
 

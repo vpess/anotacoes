@@ -11,7 +11,7 @@ cover_image: '/images/docker-icon.png'
 - **[DockerHub: repositório de imagens](https://hub.docker.com/)**
 - **[Apostila auxiliar](http://files.cod3r.com.br/apostila-docker.pdf)**
 
-## -> Observações
+## Observações
 
 - Containers não reconhecem endereço DNS. Caso haja a necessidade de subir uma aplicação para um container, as rotas/servidores deverão ser especificadas pelo endereço IP.
 
@@ -53,7 +53,7 @@ cover_image: '/images/docker-icon.png'
   CMD ["run.py"]
   ```
 
-## -> Conceitos
+## Conceitos
 
 - **Imagem**: Equivale à uma classe na programação orientada a objetos. A partir de uma imagem, podemos criar diversos containers.
 - **Container**: Equivale à um objeto de uma classe na programação orientada a objetos. Todo container precisa ter nomes únicos.
@@ -61,7 +61,7 @@ cover_image: '/images/docker-icon.png'
 - **DockerHub**: SAAS (Software como serviço), produto oficial que possui um repositório oficial de imagens Docker
 - **Dockerfile**: arquivo não tem extensão. O arquivo não funcionará se tiver um nome diferente. Serve para o build de imagens que são criadas manualmente/personalizadas.
 
-## -> Comandos
+## Comandos
 
 `systemctl start docker`: inicia os serviços do Docker num ambiente Linux/Unix
 

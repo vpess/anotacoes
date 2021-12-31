@@ -11,7 +11,7 @@ cover_image: '/images/openbsd-icon.png'
 - **[Mirrors](https://www.openbsd.org/ftp.html)**
 - **[Manuais](https://man.openbsd.org/)**
 
-## -> Guia de instalação
+## Guia de instalação
 
 - Selecionar 'I' e prosseguir com as configurações padrão do instalador (atentar-se com a parte do particionamento)
 
@@ -53,7 +53,7 @@ cover_image: '/images/openbsd-icon.png'
     reboot
     ```
 
-## -> Comandos
+## Comandos
 
 `sysupgrade -s`: atualiza o sistema
 

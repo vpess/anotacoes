@@ -7,7 +7,7 @@ excerpt: 'Informações gerais e e comandos do Linux.'
 cover_image: '/images/tux-icon.png'
 ---
 
-## -> Comandos mais utilizados e seus parâmetros
+## Comandos mais utilizados e seus parâmetros
 
 - `date`: Exibe a data e a hora do sistema operacional.
 
