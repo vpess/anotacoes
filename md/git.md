@@ -9,13 +9,13 @@ cover_image: '/images/git-icon.png'
 
 - **[Documentação oficial](https://git-scm.com/docs/)**
 
-## -> Camadas
+## Camadas
 
 - *Working directory*: Arquivos modificados (changes not-staged), excluídos ou adicionados (arquivos untracked);
 - *Staging area (staged)*: Arquivos preparados para serem versionados (git add);
 - *Committed*: Arquivos salvos (git commit).
 
-## -> Conceitos
+## Conceitos
 
 - **Issues**: Gerenciamento de bugs, melhorias e etc
 - **Milestones**: Flags que servem para definir a versão em que as issues serão atendidas
@@ -28,13 +28,13 @@ cover_image: '/images/git-icon.png'
 - **Tag**: Destaca um commit entre os demais. Tem utilidade em projetos longos que possuem muitos commits, onde é necessário destacar um em específico (que possua uma versão implementada, uma funcionalidade, etc). No Github, as tags são Releases.
 - **Conflicts**: Um conflito sempre será apontado no arquivo conflitado. O conflito será sinalizado com os símbolos >>>>>>>>>>, ============== e <<<<<<<<<<<<. Para efetuar a correção, deve-se editar o arquivo conflitado, escolhendo a alteração que deseja manter. Para isso, apague a alteração que deseja descartar, e também os caracteres/símbolos especiais que sinalizam o conflito. Feito isso, efetue o commit e o push.
 
-## -> Observações
+## Observações
 
 - Se um arquivo for alterado enquanto estiver na staging area, as alterações não serão migradas para o commit.
 
 - arquivo **.gitignore**: arquivo de configuração que contém quais os arquivos serão ignorados no `git-add` e `git-commit`. Dentro do arquivo, deverá ser digitado o nome dos arquivos que serão ignorados, ou então a extensão e outros parâmtros.
 
-## -> Comandos
+## Comandos
 
 `git config --list` OU `git config --global --list`: exibe lista de configurações feitas no git
 

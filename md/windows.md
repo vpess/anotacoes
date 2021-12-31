@@ -7,7 +7,7 @@ excerpt: 'Informações e passo a passos relacionados ao SO.'
 cover_image: '/images/windows-icon.png'
 ---
 
-## -> Configurar o sistema para solicitar senha ao executar como admin
+## Configurar o sistema para solicitar senha ao executar como admin
 
 [Vídeo](https://www.youtube.com/watch?v=AIks8BQa4to)
 
@@ -20,13 +20,13 @@ cover_image: '/images/windows-icon.png'
 - Clicar em "Opções de segurança"
 - Controle de Conta de Usuário: comportamento da solicitação de elevação de administradores >> Pedir credenciais
 
-## -> Fazer apenas atualizações de segurança
+## Fazer apenas atualizações de segurança
 
 [Vídeo](https://www.youtube.com/watch?v=HryjIsPx6Zg)
 
 [Texto](https://christitus.com/windows-update-security-only/)
 
-## -> Remover limite de banda-larga
+## Remover limite de banda-larga
 
 [Vídeo](https://www.youtube.com/watch?v=7u1miYJmJ_4)
 

@@ -7,7 +7,7 @@ excerpt: 'Informações e comandos do Powershell.'
 cover_image: '/images/powershell-icon.png'
 ---
 
-## -> Comandos
+## Comandos
 
 - Ad no Powershell: `Import-Module ActiveDirectory`
 - Verificar informações do computador: `Get-ComputerInfo`
@@ -16,7 +16,7 @@ cover_image: '/images/powershell-icon.png'
 - Comando similar ao mkdir: `New-Item -path`
 - Comando similar ao rm -r: `Remove-Item -recurse`
 
-## -> Exemplos de código (scripts)
+## Exemplos de código (scripts)
 
 - Copiar/colar arquivos entre computadores ([Referencia](https://richardspowershellblog.wordpress.com/2015/05/28/copy-files-over-ps-remoting-sessions/)):
 
@@ -31,7 +31,7 @@ Copy-Item nomedoarquivo -Destination "diretorio_destino" -ToSession $s
 Get-WmiObject –ComputerName MI00000000 –Class Win32_ComputerSystem | Select-Object UserName
 ```
 
-## -> Aliases
+## Aliases
 
 | Comando | Alias |
 | ------ | ------ |

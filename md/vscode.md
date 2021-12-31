@@ -9,7 +9,7 @@ cover_image: '/images/vscode-icon.png'
 
 [Keybindings](https://code.visualstudio.com/docs/getstarted/keybindings)
 
-## -> Hotkeys
+## Hotkeys
 
 - **Ctrl + Shift + P**: 'Menu iniciar' do Vscode, conhecido como paleta de comandos
 
