@@ -41,6 +41,8 @@ code {
 
 pre {
   background: #2a2a2a;
+  white-space: pre-wrap;
+  overflow: auto;
 }
 
 img {
