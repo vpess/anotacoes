@@ -2,7 +2,7 @@
 title: 'Postgre SQL'
 title_note: '🐘 Postgre SQL'
 date: '15/09/21'
-update: '15/09/21'
+update: '19/06/22'
 excerpt: 'Informações e comandos sobre o Postgre SQL.'
 cover_image: '/images/postgresql-icon.png'
 ---
@@ -68,4 +68,32 @@ CREATE TABLE locadora.filmes (
     ano NUMERIC NOT NULL,
     data_cadastro TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT LOCALTIMESTAMP(0)
 )
+```
+
+- Inclusão de uma nova coluna, chamada **diretor**, na tabela **filmes**, presente no schema **locadora**.
+
+```sql
+ALTER TABLE locadora.filmes (
+    ADD COLUMN diretor VARCHAR(200) NOT NULL
+)
+```
+
+- Exemplo de inserção de dado na tabela **filmes**, presente no schema **locadora**.
+
+```sql
+INSERT INTO 
+    locadora.filmes (nome, ano, diretor)
+VALUES
+    ('Heat', '1995', 'Michael Mann')
+```
+
+- Exemplo de inserção múltipla de dados na tabela **filmes**, presente no schema **locadora**.
+
+```sql
+INSERT INTO 
+    locadora.filmes (nome, ano, diretor)
+VALUES
+    ('The Big Lebowski', '1998', 'Cohen Brothers'),
+    ('Pulp Fiction', '1994', 'Quentin Tarantino'),
+    ('Black Dynamite', '2009', 'Scott Sanders');
 ```
