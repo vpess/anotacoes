@@ -1,11 +1,37 @@
 ---
 title: 'Windows'
 title_note: '🪟 Windows'
-date: '01/09/21'
-update: '01/09/21'
+date: '21/06/22'
+update: '21/06/22'
 excerpt: 'Informações e passo a passos relacionados ao SO.'
 cover_image: '/images/windows-icon.png'
 ---
+
+## Executáveis do sistema
+
+- Painel de Gerenciamento: `compmgmt.msc`
+- Gerenciador de Dispositivos: `devmgmt.msc`
+- Windows Explorer: `explorer.exe /separate`
+- Gerenciador de Tarefas: `taskmgr`
+- Powershell: `powershell`
+- Painel de Controle: `control`
+- Painel de Controle (desinstalação): `appwiz.cpl`
+- Dispositivos e Impressoras: `control printers`
+- Microsoft Management Console: `mmc.exe`
+- Configurações de Som: `mmsys.cpl`
+- Alterar configurações do adaptador de rede: `ncpa.cpl`
+- Gerenciador de Serviços: `services.msc`
+- Opções de Internet: `inetcpl.cpl`
+- Configurações de data e hora: `timedate.cpl`
+- Configurações do sistema (variável do ambiente): `sysdm.cpl`
+- Configurações do sistema (inicialização): `msconfig`
+- DirectX Diagnostic Tool: `dxdiag`
+
+Localização de programas do Windows: **C:\Windows**
+
+Localização de dll's: **C:\Windows\System32**
+
+Windows+R como adm: Digitar o nome do programa e apertar **CTRL+SHIFT+ENTER**
 
 ## Configurar o sistema para solicitar senha ao executar como admin
 
@@ -39,3 +65,13 @@ cover_image: '/images/windows-icon.png'
 - Executar `regedit`;
 - Acessar *Computador\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft*;
 - Clicar sobre a pasta *Microsot*, Novo > Chave > nome `Psched`. Dentro da chave, botão direito, novo valor DWORD(32-bit); nome: NonBestEffortLimit
+
+## Miscelânea
+
+- Pasta de inicialização do Windows (usuário): `%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
+
+- Comandos nativos não reconhecidos no prompt: Adicionar na variável de sistema PATH os diretórios `%SystemRoot%;` e `%SystemRoot%\system32;`.
+
+- Gerenciador de Tarefas travado: `CTRL+SHIFT+ESC` (irá iniciar uma outra janela do Gerenciador de Tarefas independente da ocasião).
+
+- Backup emergencial (recuperação) do Office: `%appdata%\Microsoft\`Nome do software (Word, Excel, Powerpoint)
