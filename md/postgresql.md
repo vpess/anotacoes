@@ -2,7 +2,7 @@
 title: 'Postgre SQL'
 title_note: '🐘 Postgre SQL'
 date: '15/09/21'
-update: '19/06/22'
+update: '30/06/22'
 excerpt: 'Informações e comandos sobre o Postgre SQL.'
 cover_image: '/images/postgresql-icon.png'
 ---
@@ -35,10 +35,15 @@ cover_image: '/images/postgresql-icon.png'
 - `DELETE FROM nome_tabela WHERE id IN (x, y)`: deleta todas as linhas que possuem o id especificado dentro do parênteses
 - `ALTER TABLE table_name ALTER COLUMN column_name TYPE data_type USING new_data_type`: altera o tipo de dado de uma tabela
 - `ALTER TABLE table_name ALTER COLUMN column_name TYPE json USING to_jsonb(column_name)::json`: altera o tipo de dado de uma coluna populada para json
-
 - `SELECT * FROM nome_tabela WHERE campo_json> 'cor' = 'azul'`: seleciona todas as ocorrências da tabela onde o valor do objeto **cor** seja igual a **azul**.
 
 ## Exemplos de código (scripts)
+
+- Exibe todas as conexões ativas no banco de dados Postgre
+
+```sql
+SELECT * from pg_stat_activity
+```
 
 - Criação da tabela **secao03**, com uma coluna **id** como chave primária e uma coluna **descricao** com limite de 50 caracteres variados e que não pode ser nula.
 

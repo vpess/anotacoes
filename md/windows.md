@@ -26,6 +26,8 @@ cover_image: '/images/windows-icon.png'
 - Configurações do sistema (variável do ambiente): `sysdm.cpl`
 - Configurações do sistema (inicialização): `msconfig`
 - DirectX Diagnostic Tool: `dxdiag`
+- Conexão com Área de Trabalho Remota: `mstsc`
+- Active Directory (RSAT): `dsa.msc`
 
 Localização de programas do Windows: **C:\Windows**
 
@@ -67,6 +69,8 @@ Windows+R como adm: Digitar o nome do programa e apertar **CTRL+SHIFT+ENTER**
 - Clicar sobre a pasta *Microsot*, Novo > Chave > nome `Psched`. Dentro da chave, botão direito, novo valor DWORD(32-bit); nome: NonBestEffortLimit
 
 ## Miscelânea
+
+- Reiniciar o sistema de forma imediata: `shutdown -f -t 00 -r`
 
 - Pasta de inicialização do Windows (usuário): `%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
 
