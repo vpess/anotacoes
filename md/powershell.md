@@ -2,7 +2,7 @@
 title: 'Powershell'
 title_note: '🐚 Powershell'
 date: '01/09/21'
-update: '01/09/21'
+update: '16/09/21'
 excerpt: 'Informações e comandos do Powershell.'
 cover_image: '/images/powershell-icon.png'
 ---
@@ -29,6 +29,18 @@ Copy-Item nomedoarquivo -Destination "diretorio_destino" -ToSession $s
 
 ```ps
 Get-WmiObject –ComputerName MI00000000 –Class Win32_ComputerSystem | Select-Object UserName
+```
+
+- Iniciar sessão remota (acesso similar ao SSH)
+
+```ps
+etsn -ComputerName MIXXXXXXX -Credential (Get-Credential)
+```
+
+- Buscar processo pelo nome
+
+```ps
+Get-Process -IncludeUserName | Where-Object {$_.ProcessName -like "*nome-processo*"}
 ```
 
 ## Aliases
